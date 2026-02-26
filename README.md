@@ -1,5 +1,4 @@
-# Web_Lab
-Web Programlama Dersi Oluşturulmuş Repo.
+# Bu branch Portfolyo Sitesi İçin Oluşturulmuştur.
 
-# Lab Uygulamaları
-Derste verilen lab uygulamaları branch şeklinde açılmıştır.
+Portfolyö : https://yagizenesdogan.me/
+Portfolyö GitHub : https://github.com/YENESDGN/Personal-Portfolio
