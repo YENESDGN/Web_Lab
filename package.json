@@ -1,0 +1,22 @@
+{
+  "name": "lab-2-semantic-portfolio",
+  "version": "1.0.0",
+  "description": "LAB-2: Semantik HTML5 ve Erişilebilirlik Portföy Projesi",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "npx http-server src -p 8080 -o",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "html5",
+    "accessibility",
+    "semantic-html",
+    "portfolio",
+    "a11y"
+  ],
+  "author": "Web Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
