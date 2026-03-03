@@ -25,42 +25,48 @@
     
     <section id="hakkimda">
       <h2>Hakkımda</h2>
-      <figure>
-        <img src="assets/images/profil.jpg" alt="Web developer profil fotoğrafı - çalışma masasında bilgisayar karşısında" width="300" height="300" />
-        <figcaption>Yazılım Geliştirici</figcaption>
-      </figure>
-      <p>Merhaba! Ben bir web geliştiriciyim ve modern web teknolojileri ile kullanıcı dostu uygulamalar geliştiriyorum.</p>
-      <h3>Kullandığım Teknolojiler</h3>
-      <ul>
-        <li>HTML5 & CSS3</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React.js</li>
-        <li>Node.js</li>
-        <li>Git & GitHub</li>
-      </ul>
+      <div class="about-content">
+        <figure>
+          <img src="assets/images/profil.jpg" alt="Web developer profil fotoğrafı - çalışma masasında bilgisayar karşısında" width="300" height="300" />
+          <figcaption>Yazılım Geliştirici</figcaption>
+        </figure>
+        <div>
+          <p>Merhaba! Ben bir web geliştiriciyim ve modern web teknolojileri ile kullanıcı dostu uygulamalar geliştiriyorum.</p>
+          <h3>Kullandığım Teknolojiler</h3>
+          <ul class="skill-tags">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+      </div>
     </section>
     
     <section id="projeler">
       <h2>Projelerim</h2>
-      <article>
-        <h3>Stok Takip Sistemi</h3>
-        <figure>
-          <img src="assets/images/proje-stok.jpg" alt="Stok takip sistemi kontrol paneli ekran görüntüsü - ürün envanteri ve stok yönetimi arayüzü" width="600" height="400" />
-          <figcaption>Stok Takip Sistemi - Envanter Yönetimi</figcaption>
-        </figure>
-        <p>İşletmeler için stok takip ve envanter yönetim uygulaması. Ürün girişi, çıkışı ve raporlama özellikleri içerir.</p>
-        <p><strong>Teknolojiler:</strong> React, Node.js, MongoDB, Chart.js</p>
-      </article>
-      
-      <article>
-        <h3>Dizi-Film Arşivi</h3>
-        <figure>
-          <img src="assets/images/proje-arsiv.jpg" alt="Dizi-film arşiv uygulaması ekran görüntüsü - film kartları ve arama özellikleri" width="600" height="400" />
-          <figcaption>Dizi-Film Arşivi - Ana Sayfa</figcaption>
-        </figure>
-        <p>Kişisel dizi ve film izleme takip uygulaması. İzleme listesi, değerlendirme ve öneri sistemleri.</p>
-        <p><strong>Teknolojiler:</strong> Next.js, PostgreSQL, TailwindCSS, TMDB API</p>
-      </article>
+      <div class="project-grid">
+        <article class="project-card">
+          <figure>
+            <img src="assets/images/proje-stok.jpg" alt="Stok takip sistemi kontrol paneli ekran görüntüsü - ürün envanteri ve stok yönetimi arayüzü" width="600" height="400" />
+            <figcaption>Stok Takip Sistemi - Envanter Yönetimi</figcaption>
+          </figure>
+          <h3>Stok Takip Sistemi</h3>
+          <p>İşletmeler için stok takip ve envanter yönetim uygulaması. Ürün girişi, çıkışı ve raporlama özellikleri içerir.</p>
+          <p><strong>Teknolojiler:</strong> React, Node.js, MongoDB, Chart.js</p>
+        </article>
+        
+        <article class="project-card">
+          <figure>
+            <img src="assets/images/proje-arsiv.jpg" alt="Dizi-film arşiv uygulaması ekran görüntüsü - film kartları ve arama özellikleri" width="600" height="400" />
+            <figcaption>Dizi-Film Arşivi - Ana Sayfa</figcaption>
+          </figure>
+          <h3>Dizi-Film Arşivi</h3>
+          <p>Kişisel dizi ve film izleme takip uygulaması. İzleme listesi, değerlendirme ve öneri sistemleri.</p>
+          <p><strong>Teknolojiler:</strong> Next.js, PostgreSQL, TailwindCSS, TMDB API</p>
+        </article>
+      </div>
     </section>
     
     <section id="iletisim">
