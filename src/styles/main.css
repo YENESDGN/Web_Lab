@@ -1,0 +1,276 @@
+/* Genel sıfırlama */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Skip link: normalde gizli, Tab ile görünür */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1E3A8A;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.skip-link:focus { 
+  top: 0; 
+}
+
+/* Focus göstergesi ASLA kaldırma */
+:focus { 
+  outline: 2px solid #2563EB; 
+  outline-offset: 2px; 
+}
+
+/* Header ve Navigasyon */
+header {
+  background: #1E3A8A;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main h1 {
+  text-align: center;
+  color: #1E3A8A;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+section {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #1E3A8A;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #2563EB;
+  padding-bottom: 0.5rem;
+}
+
+section h3 {
+  color: #374151;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Figure ve Images */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #6B7280;
+}
+
+/* Lists */
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Articles (Proje kartları) */
+article {
+  border-left: 4px solid #2563EB;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article p {
+  margin-bottom: 0.5rem;
+}
+
+/* Form stilleri */
+fieldset {
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1E3A8A;
+  padding: 0 0.5rem;
+}
+
+.form-group { 
+  margin-bottom: 1rem; 
+}
+
+label { 
+  display: block; 
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+input, 
+textarea, 
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563EB;
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown),
+select:invalid:not(:focus) {
+  border-color: #DC2626;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error-msg { 
+  color: #DC2626; 
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.25rem;
+  min-height: 1.2rem;
+}
+
+button[type="submit"] {
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background: #1E40AF;
+}
+
+button[type="submit"]:focus {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+  background: #1F2937;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer nav ul {
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  color: #93C5FD;
+}
+
+footer nav a:hover,
+footer nav a:focus {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  main h1 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+}
