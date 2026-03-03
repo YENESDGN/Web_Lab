@@ -1,0 +1,334 @@
+/* ===== COMPONENTS ===== */
+/* LAB-3: Bileşen Stilleri (Nav, Cards, Forms, Tags) */
+
+/* ===== HEADER & NAVIGATION ===== */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  box-shadow: var(--shadow-md);
+}
+
+/* Navigasyon menüsü - Flexbox */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  display: block;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobilde dikey yığın */
+@media (max-width: 639px) {
+  header {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===== PROJE KARTLARI ===== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card figure {
+  margin: 0;
+}
+
+.project-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card figcaption {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.project-card h3 {
+  padding: var(--space-md) var(--space-md) var(--space-sm);
+  margin: 0;
+  color: var(--color-primary);
+  font-size: var(--text-xl);
+}
+
+.project-card p {
+  padding: 0 var(--space-md) var(--space-sm);
+  color: var(--color-text);
+  flex-grow: 1;
+  margin: 0;
+}
+
+.project-card p:last-of-type {
+  padding-bottom: var(--space-md);
+}
+
+.project-card strong {
+  color: var(--color-primary);
+}
+
+/* ===== BECERI ETİKETLERİ ===== */
+
+.skill-tags li {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.skill-tags li:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ===== FORM BİLEŞENLERİ ===== */
+
+fieldset {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: 0;
+}
+
+legend {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0 var(--space-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-secondary);
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error-msg {
+  color: var(--color-error);
+  font-size: var(--text-sm);
+  display: block;
+  margin-top: var(--space-xs);
+  min-height: 1.2rem;
+}
+
+button[type="submit"] {
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  margin-top: var(--space-sm);
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background: var(--color-primary);
+}
+
+button[type="submit"]:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  button[type="submit"] {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #1F2937;
+  color: white;
+  padding: var(--space-2xl) var(--space-md);
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+footer nav ul {
+  justify-content: center;
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  color: #93C5FD;
+}
+
+footer nav a:hover,
+footer nav a:focus {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: var(--text-base);
+}
+
+/* ===== SKIP LINK ===== */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  z-index: var(--z-modal);
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===== SECTION GENEL ===== */
+
+section {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-bg);
+}
+
+section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: var(--space-sm);
+  font-size: var(--text-2xl);
+}
+
+section h3 {
+  color: var(--color-text);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-xl);
+}
+
+section p {
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+
+/* ===== FIGURE & IMAGES ===== */
+
+figure {
+  margin: var(--space-lg) 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: var(--space-sm);
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
