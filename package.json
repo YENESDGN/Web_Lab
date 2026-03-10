@@ -5,6 +5,7 @@
   "main": "src/index.html",
   "scripts": {
     "dev": "npx http-server src -p 8080 -o",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
     "start": "npm run dev"
   },
   "keywords": [
@@ -17,6 +18,7 @@
   "author": "Web Developer",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "tailwindcss": "^4.2.1"
   }
 }

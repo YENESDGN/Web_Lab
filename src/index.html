@@ -4,121 +4,172 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Yazılım geliştirici portföy sitesi - Web projelerim ve iletişim bilgileri">
-  <title>Portföy | Web Developer</title>
+  <title>Portföy | Web Developer - LAB-4 Tailwind CSS</title>
+  <!-- Tailwind CSS CDN (LAB-4) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#2563EB',
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Ana içeriğe atla</a>
+<body class="min-h-screen flex flex-col">
+  <a href="#main-content" class="skip-link focus:top-0">Ana içeriğe atla</a>
   
-  <header>
-    <nav aria-label="Ana navigasyon">
-      <ul>
-        <li><a href="#hakkimda">Hakkımda</a></li>
-        <li><a href="#projeler">Projeler</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
+  <!-- Dark Mode Toggle Button (LAB-4) -->
+  <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-3 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition-all shadow-lg" aria-label="Tema değiştir">
+    <span class="text-2xl dark:hidden">🌙</span>
+    <span class="text-2xl hidden dark:inline">🌞</span>
+  </button>
+  
+  <header class="bg-primary text-white sticky top-0 z-20 shadow-md dark:bg-secondary">
+    <nav aria-label="Ana navigasyon" class="container mx-auto px-4 py-4">
+      <ul class="flex flex-wrap gap-4 md:gap-6 justify-center">
+        <li><a href="#hakkimda" class="hover:underline transition-all">Hakkımda</a></li>
+        <li><a href="#projeler" class="hover:underline transition-all">Projeler</a></li>
+        <li><a href="#iletisim" class="hover:underline transition-all">İletişim</a></li>
       </ul>
     </nav>
   </header>
   
-  <main id="main-content">
-    <h1>Web Developer Portföyü</h1>
+  <main id="main-content" class="flex-1">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-primary dark:text-secondary py-8 md:py-12">Web Developer Portföyü</h1>
     
-    <section id="hakkimda">
-      <h2>Hakkımda</h2>
-      <div class="about-content">
-        <figure>
-          <img src="assets/images/profil.jpg" alt="Web developer profil fotoğrafı - çalışma masasında bilgisayar karşısında" width="300" height="300" />
-          <figcaption>Yazılım Geliştirici</figcaption>
-        </figure>
-        <div>
-          <p>Merhaba! Ben bir web geliştiriciyim ve modern web teknolojileri ile kullanıcı dostu uygulamalar geliştiriyorum.</p>
-          <h3>Kullandığım Teknolojiler</h3>
-          <ul class="skill-tags">
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>Git & GitHub</li>
-          </ul>
+    <section id="hakkimda" class="py-12 md:py-16 px-4 dark:bg-gray-900">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-secondary mb-8 border-b-4 border-secondary pb-3">Hakkımda</h2>
+        <div class="about-content flex flex-col md:flex-row gap-8 items-center md:items-start">
+          <figure class="flex-shrink-0">
+            <img src="assets/images/profil.jpg" alt="Web developer profil fotoğrafı - çalışma masasında bilgisayar karşısında" width="300" height="300" class="rounded-full shadow-lg" />
+            <figcaption class="text-center mt-3 text-gray-600 dark:text-gray-400 italic">Yazılım Geliştirici</figcaption>
+          </figure>
+          <div class="flex-1">
+            <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">Merhaba! Ben bir web geliştiriciyim ve modern web teknolojileri ile kullanıcı dostu uygulamalar geliştiriyorum.</p>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Kullandığım Teknolojiler</h3>
+            <ul class="skill-tags flex flex-wrap gap-2 justify-center md:justify-start">
+              <li class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity dark:bg-secondary">HTML5 & CSS3</li>
+              <li class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity dark:bg-secondary">JavaScript (ES6+)</li>
+              <li class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity dark:bg-secondary">React.js</li>
+              <li class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity dark:bg-secondary">Node.js</li>
+              <li class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity dark:bg-secondary">Git & GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     
-    <section id="projeler">
-      <h2>Projelerim</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <figure>
-            <img src="assets/images/proje-stok.jpg" alt="Stok takip sistemi kontrol paneli ekran görüntüsü - ürün envanteri ve stok yönetimi arayüzü" width="600" height="400" />
-            <figcaption>Stok Takip Sistemi - Envanter Yönetimi</figcaption>
-          </figure>
-          <h3>Stok Takip Sistemi</h3>
-          <p>İşletmeler için stok takip ve envanter yönetim uygulaması. Ürün girişi, çıkışı ve raporlama özellikleri içerir.</p>
-          <p><strong>Teknolojiler:</strong> React, Node.js, MongoDB, Chart.js</p>
-        </article>
-        
-        <article class="project-card">
-          <figure>
-            <img src="assets/images/proje-arsiv.jpg" alt="Dizi-film arşiv uygulaması ekran görüntüsü - film kartları ve arama özellikleri" width="600" height="400" />
-            <figcaption>Dizi-Film Arşivi - Ana Sayfa</figcaption>
-          </figure>
-          <h3>Dizi-Film Arşivi</h3>
-          <p>Kişisel dizi ve film izleme takip uygulaması. İzleme listesi, değerlendirme ve öneri sistemleri.</p>
-          <p><strong>Teknolojiler:</strong> Next.js, PostgreSQL, TailwindCSS, TMDB API</p>
-        </article>
+    <section id="projeler" class="py-12 md:py-16 px-4 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-secondary mb-8 border-b-4 border-secondary pb-3">Projelerim</h2>
+        <div class="project-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="project-card bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all overflow-hidden dark:bg-gray-700">
+            <figure class="mb-4">
+              <img src="assets/images/proje-stok.jpg" alt="Stok takip sistemi kontrol paneli ekran görüntüsü - ürün envanteri ve stok yönetimi arayüzü" width="600" height="400" class="w-full h-48 object-cover" />
+              <figcaption class="px-6 py-2 text-sm text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-800">Stok Takip Sistemi - Envanter Yönetimi</figcaption>
+            </figure>
+            <div class="px-6 pb-6">
+              <h3 class="text-2xl font-bold mb-3 text-primary dark:text-secondary">Stok Takip Sistemi</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">İşletmeler için stok takip ve envanter yönetim uygulaması. Ürün girişi, çıkışı ve raporlama özellikleri içerir.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><strong class="text-primary dark:text-secondary">Teknolojiler:</strong> React, Node.js, MongoDB, Chart.js</p>
+            </div>
+          </article>
+          
+          <article class="project-card bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all overflow-hidden dark:bg-gray-700">
+            <figure class="mb-4">
+              <img src="assets/images/proje-arsiv.jpg" alt="Dizi-film arşiv uygulaması ekran görüntüsü - film kartları ve arama özellikleri" width="600" height="400" class="w-full h-48 object-cover" />
+              <figcaption class="px-6 py-2 text-sm text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-800">Dizi-Film Arşivi - Ana Sayfa</figcaption>
+            </figure>
+            <div class="px-6 pb-6">
+              <h3 class="text-2xl font-bold mb-3 text-primary dark:text-secondary">Dizi-Film Arşivi</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">Kişisel dizi ve film izleme takip uygulaması. İzleme listesi, değerlendirme ve öneri sistemleri.</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><strong class="text-primary dark:text-secondary">Teknolojiler:</strong> Next.js, PostgreSQL, TailwindCSS, TMDB API</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
     
-    <section id="iletisim">
-      <h2>İletişim</h2>
-      <form action="#" method="POST" novalidate>
-        <fieldset>
-          <legend>İletişim Formu</legend>
-          
-          <div class="form-group">
-            <label for="name">Ad Soyad:</label>
-            <input type="text" id="name" name="name" required minlength="2" aria-describedby="name-error" />
-            <small id="name-error" class="error-msg" role="alert"></small>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" required aria-describedby="email-error" />
-            <small id="email-error" class="error-msg" role="alert"></small>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Konu:</label>
-            <select id="subject" name="subject" required aria-describedby="subject-error">
-              <option value="">-- Seçiniz --</option>
-              <option value="is">İş Teklifi</option>
-              <option value="soru">Soru</option>
-              <option value="oneri">Öneri</option>
-            </select>
-            <small id="subject-error" class="error-msg" role="alert"></small>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-error"></textarea>
-            <small id="message-error" class="error-msg" role="alert"></small>
-          </div>
-          
-          <button type="submit">Gönder</button>
-        </fieldset>
-      </form>
+    <section id="iletisim" class="py-12 md:py-16 px-4 dark:bg-gray-900">
+      <div class="container mx-auto max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-secondary mb-8 border-b-4 border-secondary pb-3">İletişim</h2>
+        <form action="#" method="POST" novalidate class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+          <fieldset class="space-y-6">
+            <legend class="text-2xl font-semibold text-primary dark:text-secondary mb-4">İletişim Formu</legend>
+            
+            <div class="form-group">
+              <label for="name" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Ad Soyad:</label>
+              <input type="text" id="name" name="name" required minlength="2" aria-describedby="name-error" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" />
+              <small id="name-error" class="error-msg text-red-600 text-sm" role="alert"></small>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">E-posta:</label>
+              <input type="email" id="email" name="email" required aria-describedby="email-error" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" />
+              <small id="email-error" class="error-msg text-red-600 text-sm" role="alert"></small>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Konu:</label>
+              <select id="subject" name="subject" required aria-describedby="subject-error" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white">
+                <option value="">-- Seçiniz --</option>
+                <option value="is">İş Teklifi</option>
+                <option value="soru">Soru</option>
+                <option value="oneri">Öneri</option>
+              </select>
+              <small id="subject-error" class="error-msg text-red-600 text-sm" role="alert"></small>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Mesajınız:</label>
+              <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-error" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white"></textarea>
+              <small id="message-error" class="error-msg text-red-600 text-sm" role="alert"></small>
+            </div>
+            
+            <button type="submit" class="w-full bg-secondary text-white px-6 py-3 text-lg rounded-md hover:opacity-90 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-secondary font-semibold">Gönder</button>
+          </fieldset>
+        </form>
+      </div>
     </section>
   </main>
   
-  <footer>
-    <p>&copy; 2025 Web Developer. Tüm hakları saklıdır.</p>
-    <nav aria-label="Sosyal medya bağlantıları">
-      <ul>
-        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="mailto:info@example.com">E-posta</a></li>
-      </ul>
-    </nav>
+  <footer class="bg-gray-900 text-white py-8 px-4 mt-auto">
+    <div class="container mx-auto max-w-4xl text-center">
+      <p class="mb-4">&copy; 2025 Web Developer. Tüm hakları saklıdır.</p>
+      <nav aria-label="Sosyal medya bağlantıları">
+        <ul class="flex justify-center gap-6 flex-wrap">
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a></li>
+          <li><a href="mailto:info@example.com" class="text-blue-400 hover:text-blue-300 transition-colors">E-posta</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
+  
+  <!-- Dark Mode Script (LAB-4) -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    }
+    
+    // Toggle theme
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
