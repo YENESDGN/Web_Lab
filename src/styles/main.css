@@ -1,5 +1,5 @@
 /* ===== MAIN STYLES ===== */
-/* LAB-3: Modern CSS Responsive Layout - Modüler Yapı */
+/* LAB-3 + LAB-4: Tailwind CSS ile uyumlu temel stiller */
 
 /* ===== CSS MOD IMPORT ===== */
 @import url('tokens.css');
@@ -7,8 +7,8 @@
 @import url('components.css');
 
 /* ===== BASE RESET ===== */
-*, 
-*::before, 
+*,
+*::before,
 *::after {
   margin: 0;
   padding: 0;
@@ -21,66 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-/* ===== TYPOGRAPHY ===== */
-
-h1 {
-  font-size: var(--text-3xl);
-  text-align: center;
-  color: var(--color-primary);
-  margin-bottom: var(--space-2xl);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: var(--text-2xl);
-  font-weight: 600;
-}
-
-h3 {
-  font-size: var(--text-xl);
-  font-weight: 600;
-}
-
-p {
-  font-size: var(--text-base);
-  margin-bottom: var(--space-md);
-}
-
-a {
-  color: var(--color-secondary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== LISTS ===== */
-
-ul {
-  margin-left: var(--space-lg);
-  margin-top: var(--space-sm);
-}
-
-li {
-  margin-bottom: var(--space-sm);
-}
-
 /* ===== FOCUS INDICATOR (ACCESSIBILITY) ===== */
 
 :focus {
@@ -88,7 +28,6 @@ li {
   outline-offset: 2px;
 }
 
-/* Ensure focus is always visible - NEVER remove */
 :focus:not(:focus-visible) {
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
@@ -106,18 +45,6 @@ li {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
 }
 
 /* ===== RESPONSIVE IMAGES ===== */
