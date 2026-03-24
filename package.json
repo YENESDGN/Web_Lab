@@ -1,24 +1,23 @@
 {
-  "name": "lab-2-semantic-portfolio",
+  "name": "lab-5-typescript-projects",
   "version": "1.0.0",
-  "description": "LAB-2: Semantik HTML5 ve Erişilebilirlik Portföy Projesi",
-  "main": "src/index.html",
+  "description": "LAB-5: JavaScript/TypeScript Temelleri ve State Mantığı",
+  "type": "module",
   "scripts": {
-    "dev": "npx http-server src -p 8080 -o",
-    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
-    "start": "npm run dev"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
   },
-  "keywords": [
-    "html5",
-    "accessibility",
-    "semantic-html",
-    "portfolio",
-    "a11y"
-  ],
-  "author": "Web Developer",
-  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "tailwindcss": "^4.2.1"
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.2",
+    "vite": "^6.0.5"
   }
 }
