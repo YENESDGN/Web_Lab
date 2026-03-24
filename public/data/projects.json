@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "title": "E-Ticaret Platformu",
+    "description": "React ve Node.js ile tam kapsamlı e-ticaret uygulaması. Sepet, ödeme ve kullanıcı yönetimi içerir.",
+    "tech": ["React", "Node.js", "MongoDB"],
+    "year": 2024,
+    "category": "fullstack",
+    "featured": true,
+    "image": "/images/ecommerce.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Blog Uygulaması",
+    "description": "Next.js ile SEO dostu kişisel blog platformu. Markdown desteği ve yorum sistemi mevcuttur.",
+    "tech": ["Next.js", "TypeScript", "Tailwind"],
+    "year": 2024,
+    "category": "frontend",
+    "featured": false,
+    "image": "/images/blog.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Hava Durumu API",
+    "description": "OpenWeather API ile anlık hava durumu sorgulama. Konum bazlı 7 günlük tahmin sunar.",
+    "tech": ["JavaScript", "REST API", "CSS"],
+    "year": 2023,
+    "category": "frontend",
+    "featured": true,
+    "image": "/images/weather.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Görev Yöneticisi",
+    "description": "Drag-and-drop destekli Kanban tarzı görev panosu. Takım çalışması ve sprint planlaması için idealdir.",
+    "tech": ["React", "TypeScript", "DnD Kit"],
+    "year": 2024,
+    "category": "frontend",
+    "featured": false,
+    "image": "/images/taskboard.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Chat Uygulaması",
+    "description": "WebSocket ile gerçek zamanlı mesajlaşma. Oda bazlı sohbet ve dosya paylaşımı destekler.",
+    "tech": ["React", "Socket.io", "Express"],
+    "year": 2023,
+    "category": "fullstack",
+    "featured": true,
+    "image": "/images/chat.jpg"
+  },
+  {
+    "id": 6,
+    "title": "REST API Backend",
+    "description": "Express.js ile geliştirilmiş RESTful API. JWT kimlik doğrulama ve PostgreSQL veritabanı kullanır.",
+    "tech": ["Node.js", "Express", "PostgreSQL", "JWT"],
+    "year": 2023,
+    "category": "backend",
+    "featured": false,
+    "image": "/images/api.jpg",
+    "sourceUrl": "https://github.com/example/rest-api"
+  }
+]
