@@ -1,3 +1,5 @@
+import profilImg from "../../assets/images/profil.jpg";
+
 export default function About() {
   return (
     <section id="about" className="py-16 px-4 bg-white dark:bg-gray-950">
@@ -10,14 +12,15 @@ export default function About() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-          <div className="flex-shrink-0">
-            <div
-              className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500
-                flex items-center justify-center text-6xl shadow-lg"
-            >
-              👨‍💻
-            </div>
-          </div>
+          <figure className="flex-shrink-0">
+            <img
+              src={profilImg}
+              alt="Profil fotoğrafı"
+              width="192"
+              height="192"
+              className="w-48 h-48 rounded-full object-cover shadow-lg"
+            />
+          </figure>
           <div className="flex-1 text-center md:text-left">
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
               Merhaba! Ben bir web geliştiriciyim ve modern web teknolojileri ile

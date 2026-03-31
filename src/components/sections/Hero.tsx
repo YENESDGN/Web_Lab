@@ -11,7 +11,7 @@ export default function Hero() {
           Merhaba, ben
         </p>
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-          Ad Soyad
+          Yağız Enes DOĞAN
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
           Frontend Developer | React &amp; TypeScript
